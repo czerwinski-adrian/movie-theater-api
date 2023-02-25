@@ -4,3 +4,7 @@ const { Router } = require("express");
 const showsRouter = Router();
 
 //Get all shows
+
+
+//Export
+module.exports = showsRouter
