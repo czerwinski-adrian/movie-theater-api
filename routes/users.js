@@ -4,7 +4,7 @@ const { Router } = require("express");
 const usersRouter = Router();
 
 //Get all users
-usersRouter.get('/users', async (req, res) => {
+usersRouter.get('/', async (req, res) => {
     try {
         const allUsers = await User.findAll();
         res.status(200).send(allUsers);
@@ -14,7 +14,7 @@ usersRouter.get('/users', async (req, res) => {
 });
 
 //Get single user
-usersRouter.get('/users/:id', async (req, res) => {
+usersRouter.get('/:id', async (req, res) => {
     try {
         const user = await User.findByPk(req.params.id);
         if (!User){
